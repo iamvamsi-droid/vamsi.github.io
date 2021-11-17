@@ -3,25 +3,56 @@
 <head>
     <title>my New webpage</title>
     <link rel="stylesheet" href="new.css">
+   <script >
    
+             
+     function fn1()
+     {   
+         var usserName=document.getElementById("usserName").value;
+         var password=document.getElementById("password").value;
+         var regx=/^20AK1A30([0-9]{1,2})$/;
+
+             
+       
+            if(regx.test(password))
+            {
+                
+                
+               alert("permission accessed");
+                 return true;
+            }
+           
+        
+        else
+          {
+               alert("permission denied");
+               return false;
+          }
+       
+     } 
+     
+     
+    
+  </script>
     <STYLE>
 
          body{  background-image:url('2314950.jpg');
-
+                background:cover;
+             }
 
    </STYLE>
 </head>
 <body>
     <div class="login-form">
        <h1>LOGIN page</h1>
-         <form action="home.html" method="post">
+         <form onsubmit="return fn1()"action="home.html" method="post">
              <p>usserName</p>
-             <input type="text" placeholder="usserName" required>
+             <input id="usserName" type="text" placeholder="usserName" required>
            
              <p>password</p>
-             <input type="paassword" placeholder="paassword" required>
+             <input id="password" type="paassword" placeholder="Rollno as password " required>
              
-             <button type="submit">login</button>
+             <button id="btn1" type="submit">login</button>
            
          </form>      
      </div>
